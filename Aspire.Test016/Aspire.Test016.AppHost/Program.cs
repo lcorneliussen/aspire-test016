@@ -6,4 +6,6 @@ builder.AddProject<Projects.Aspire_Test016_Web>("webfrontend")
     .WithExternalHttpEndpoints()
     .WithReference(apiService);
 
+Console.WriteLine("Endpoint is: " + apiService.GetEndpoint("http").Url);
+
 builder.Build().Run();
